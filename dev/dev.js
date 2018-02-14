@@ -9,11 +9,11 @@ prefetchStock('goalrilla', ['asdf'])
 
 render(
 	<Available
-		site='goalrilla'
-		id='b6101w'
+		site='bear'
+		id='AT86A06455R'
 		unavailable='Out of Stock'
 		loading='Loading...'
-		//cookies={false}
+		cookies={false}
 		verbose
 	>
 		<button>Add to Cart</button>

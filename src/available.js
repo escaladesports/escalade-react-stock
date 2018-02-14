@@ -25,12 +25,10 @@ class Available extends React.Component {
 		}
 	}
 	setStock(stock) {
-		if (stock) {
-			if (!stock) {
-				return this.setState({ display: this.props.unavailable })
-			}
-			return this.setState({ display: this.props.children })
+		if (!stock) {
+			return this.setState({ display: this.props.unavailable })
 		}
+		return this.setState({ display: this.props.children })
 	}
 	render(){
 		return (
