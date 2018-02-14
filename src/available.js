@@ -2,34 +2,34 @@ import React from 'react'
 
 import getStore from './stores'
 
-class Price extends React.Component {
+class Available extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
 			display: props.loading
 		}
-		this.setPrice = this.setPrice.bind(this)
+		this.setStock = this.setStock.bind(this)
 	}
 	componentDidMount(){
 		this.store = getStore(this.props)
 
 		// Change component by event
-		this.store.addEvent(this.setPrice, {
+		this.store.addEvent(this.setStock, {
 			id: this.props.id
 		})
 
 		// Change component if price is already set
-		let price = this.store.getFormattedPrice(this.props.id)
-		if(price !== undefined){
-			this.setPrice(price)
+		let stock = this.store.getStock(this.props.id)
+		if (stock !== undefined){
+			this.setStock(stock)
 		}
 	}
-	setPrice(price) {
-		if (price) {
-			if (price === 'undefined') {
+	setStock(stock) {
+		if (stock) {
+			if (!stock) {
 				return this.setState({ display: this.props.unavailable })
 			}
-			return this.setState({ display: price })
+			return this.setState({ display: this.props.children })
 		}
 	}
 	render(){
@@ -39,9 +39,9 @@ class Price extends React.Component {
 	}
 }
 
-Price.defaultProps = {
+Available.defaultProps = {
 	loading: '',
-	unavailable: '',
+	unavailable: 'Out of Stock',
 }
 
-export default Price
+export default Available

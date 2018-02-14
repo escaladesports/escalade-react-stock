@@ -1,9 +1,9 @@
-import Price from './price'
-import PrefetchPrices from './prefetch-prices'
-import prefetchPrices from './stores'
+import Available from './available'
+import PrefetchStock from './prefetch-stock'
+import prefetchStock from './stores'
 
 export default {
-	Price,
-	PrefetchPrices,
-	prefetchPrices,
+	Available,
+	PrefetchStock,
+	prefetchStock,
 }

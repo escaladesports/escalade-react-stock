@@ -1,4 +1,4 @@
-import Store from 'escalade-price-store'
+import Store from 'escalade-stock-store'
 
 const stores = {}
 

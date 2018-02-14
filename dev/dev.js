@@ -1,20 +1,22 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Price, prefetchPrices } from '../src'
+import { Available, prefetchStock } from '../src'
 
 let containerEl = document.createElement('div')
 document.body.appendChild(containerEl)
 
-prefetchPrices('goalrilla', ['asdf'])
+prefetchStock('goalrilla', ['asdf'])
 
 render(
-	<Price
+	<Available
 		site='goalrilla'
 		id='b6101w'
-		unavailable='Unavailable'
+		unavailable='Out of Stock'
 		loading='Loading...'
-		cookies={false}
+		//cookies={false}
 		verbose
-	/>,
+	>
+		<button>Add to Cart</button>
+	</Available>,
 	containerEl
 )
