@@ -1,6 +1,6 @@
 {
   "name": "escalade-react-stock",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "escalade",
     "react",
@@ -18,7 +18,7 @@
     "build": "esca-scripts build --react --component --babel --input ./src --output ./dist --multiple",
     "dev": "esca-scripts dev ---input './dev/dev.js, ./dev/index.html' --react --browser --component",
     "prepublishOnly": "npm run build",
-	 "travis": "opn https://travis-ci.org/escaladesports/escalade-react-stock/branches",
+    "travis": "opn https://travis-ci.org/escaladesports/escalade-react-stock/branches",
     "reset": "esca-scripts reset"
   },
   "devDependencies": {
