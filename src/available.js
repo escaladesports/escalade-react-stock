@@ -23,6 +23,9 @@ class Available extends React.Component {
 		if (stock !== undefined){
 			this.setStock(stock)
 		}
+		else{
+			this.setStock(false)
+		}
 	}
 	setStock(stock) {
 		if (!stock) {
